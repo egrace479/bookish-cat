@@ -1,0 +1,149 @@
+/**
+ * CSS Custom Properties (Design Tokens)
+ * ======================================
+ * All theme colors, typography, spacing, and other design tokens are defined
+ * here as CSS custom properties. To change the look of the site, edit these
+ * values. Light-mode tokens live on :root; dark-mode overrides live on
+ * [data-theme="dark"].
+ *
+ * Color Palette Inspiration
+ * --------------------------
+ * Warm academic tones pulled from the site mascot (a gray-striped cat with
+ * vivid green eyes, bookshelf backgrounds, and warm wood tones).
+ */
+
+/* ── Light Mode (default) ─────────────────────────────────────────────────── */
+:root {
+  /* Backgrounds */
+  --bg-primary:      #F8F4EE;  /* warm cream — main page background            */
+  --bg-secondary:    #EDE8DF;  /* slightly darker cream — alternating sections  */
+  --bg-sidebar:      #EBF4F1;  /* soft mint — sidebar background               */
+  --bg-card:         #FFFFFF;  /* white — card / panel backgrounds             */
+  --bg-code:         #F3EFE8;  /* warm off-white — inline code backgrounds     */
+
+  /* Text */
+  --text-primary:    #2C2A26;  /* warm charcoal — body text                    */
+  --text-secondary:  #6B6660;  /* medium warm gray — captions, meta text       */
+  --text-inverted:   #F8F4EE;  /* light cream — text on dark backgrounds       */
+
+  /* Accent Colors */
+  --accent-primary:  #2D7D6B;  /* deep teal (cat-eye green meets scholarly)    */
+  --accent-hover:    #235F52;  /* darker teal — hover/active state             */
+  --accent-secondary:#5B8A3C;  /* forest green — secondary emphasis            */
+  --accent-warm:     #C17F3B;  /* warm amber — warm highlights, tags           */
+  --accent-light:    #D4EDEA;  /* very light teal — subtle backgrounds         */
+
+  /* Links */
+  --link-color:      #2D7D6B;
+  --link-hover:      #235F52;
+  --link-visited:    #4A6B8A;
+
+  /* Borders & Dividers */
+  --border-color:    #D4CCB9;
+  --border-subtle:   #E8E2D8;
+
+  /* Shadows */
+  --shadow-sm:       0 1px 3px rgba(44, 42, 38, 0.10);
+  --shadow-md:       0 4px 12px rgba(44, 42, 38, 0.12);
+  --shadow-lg:       0 8px 24px rgba(44, 42, 38, 0.14);
+
+  /* Navigation */
+  --nav-bg:          #2D7D6B;
+  --nav-text:        #F8F4EE;
+  --nav-hover-bg:    #235F52;
+  --nav-active-bg:   #1A4A3F;
+
+  /* ── Typography ──────────────────────────────────────────────────────────── */
+  --font-serif:      Georgia, 'Times New Roman', Times, serif;
+  --font-sans:       system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono:       'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+
+  --font-size-xs:    0.75rem;   /*  12px */
+  --font-size-sm:    0.875rem;  /*  14px */
+  --font-size-base:  1rem;      /*  16px */
+  --font-size-md:    1.125rem;  /*  18px */
+  --font-size-lg:    1.25rem;   /*  20px */
+  --font-size-xl:    1.5rem;    /*  24px */
+  --font-size-2xl:   1.875rem;  /*  30px */
+  --font-size-3xl:   2.25rem;   /*  36px */
+
+  --line-height-tight:  1.25;
+  --line-height-normal: 1.6;
+  --line-height-loose:  1.8;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi:   600;
+  --font-weight-bold:   700;
+
+  /* ── Spacing ─────────────────────────────────────────────────────────────── */
+  --space-1:   0.25rem;   /*  4px */
+  --space-2:   0.5rem;    /*  8px */
+  --space-3:   0.75rem;   /* 12px */
+  --space-4:   1rem;      /* 16px */
+  --space-5:   1.25rem;   /* 20px */
+  --space-6:   1.5rem;    /* 24px */
+  --space-8:   2rem;      /* 32px */
+  --space-10:  2.5rem;    /* 40px */
+  --space-12:  3rem;      /* 48px */
+  --space-16:  4rem;      /* 64px */
+
+  /* ── Layout ──────────────────────────────────────────────────────────────── */
+  --sidebar-width:   280px;
+  --content-max-width: 800px;
+  --page-max-width:  1200px;
+  --nav-height:      60px;
+
+  /* ── Border Radius ───────────────────────────────────────────────────────── */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-full: 9999px;
+
+  /* ── Transitions ─────────────────────────────────────────────────────────── */
+  --transition-fast:   150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow:   400ms ease;
+}
+
+/* ── Dark Mode ────────────────────────────────────────────────────────────── */
+[data-theme="dark"] {
+  /* Backgrounds */
+  --bg-primary:      #1C1E2B;  /* dark navy                                    */
+  --bg-secondary:    #252836;  /* slightly lighter navy                        */
+  --bg-sidebar:      #1A2626;  /* dark teal-black                              */
+  --bg-card:         #252836;  /* card backgrounds                             */
+  --bg-code:         #1F2232;  /* darker navy for code                         */
+
+  /* Text */
+  --text-primary:    #E6E2DC;  /* light warm cream                             */
+  --text-secondary:  #A8A4A0;  /* medium light warm gray                       */
+  --text-inverted:   #1C1E2B;  /* dark — text on light backgrounds             */
+
+  /* Accent Colors */
+  --accent-primary:  #4DBFA0;  /* lighter teal for readability on dark bg      */
+  --accent-hover:    #3DA88A;  /* slightly darker teal                         */
+  --accent-secondary:#7EC354;  /* lighter forest green                         */
+  --accent-warm:     #E0A455;  /* lighter amber                                */
+  --accent-light:    #1E3535;  /* dark teal — subtle background on dark        */
+
+  /* Links */
+  --link-color:      #4DBFA0;
+  --link-hover:      #3DA88A;
+  --link-visited:    #7A9CC0;
+
+  /* Borders & Dividers */
+  --border-color:    #3A4050;
+  --border-subtle:   #2E3240;
+
+  /* Shadows */
+  --shadow-sm:       0 1px 3px rgba(0, 0, 0, 0.30);
+  --shadow-md:       0 4px 12px rgba(0, 0, 0, 0.40);
+  --shadow-lg:       0 8px 24px rgba(0, 0, 0, 0.50);
+
+  /* Navigation */
+  --nav-bg:          #1A2626;
+  --nav-text:        #E6E2DC;
+  --nav-hover-bg:    #243535;
+  --nav-active-bg:   #2D7D6B;
+}

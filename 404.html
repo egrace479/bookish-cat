@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Page not found — Dr. Elizabeth G. Campolongo's website.">
+  <title>404 — Page Not Found | Dr. Elizabeth G. Campolongo</title>
+
+  <link rel="icon" type="image/png"
+        href="https://github.com/user-attachments/assets/1509118f-3210-46f3-b133-2cf7e31e3d66">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <script>
+    (function () {
+      var t = localStorage.getItem('egrace-theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+
+  <header id="site-header" role="banner"></header>
+
+  <main id="main-content" role="main">
+    <div class="page-404">
+      <img
+        src="https://github.com/user-attachments/assets/c25aca83-9239-4d99-8af1-39e830a89361"
+        alt="Two cartoon cats knock over a coffee mug next to a laptop showing '404 Site Not Found'.
+             A third cat peeks from behind the laptop. The mug reads 'Cat Caffeine'."
+        onerror="this.style.display='none'">
+
+      <h1>404 — Page Not Found</h1>
+      <p>
+        Looks like the cats knocked this page off the desk. 🐱☕<br>
+        The page you were looking for doesn't seem to exist.
+      </p>
+      <a href="index.html" class="btn btn-primary">Return Home</a>
+    </div>
+  </main>
+
+  <footer id="site-footer" role="contentinfo"></footer>
+
+  <script src="js/components.js"></script>
+  <script src="js/site.js"></script>
+  <script>
+    // No activePage — none of the nav links should be highlighted on 404
+    SiteComponents.init({ activePage: '' });
+    SiteApp.init();
+  </script>
+</body>
+</html>

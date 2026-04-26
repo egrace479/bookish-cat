@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="Elizabeth G. Campolongo, Ph.D. — Mathematician, Quantum Researcher,
+                 and Senior Data Scientist at the Imageomics Institute.">
+  <title>About | Dr. Elizabeth G. Campolongo</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png"
+        href="https://github.com/user-attachments/assets/1509118f-3210-46f3-b133-2cf7e31e3d66">
+
+  <!-- Stylesheets (order matters: variables first) -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!--
+    Apply saved theme before first paint to prevent a flash of the wrong theme.
+    This tiny inline script must run synchronously in <head>.
+  -->
+  <script>
+    (function () {
+      var t = localStorage.getItem('egrace-theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ── Navigation (injected by components.js) ───────────────────────────── -->
+  <header id="site-header" role="banner"></header>
+
+  <!-- ── Page Body ────────────────────────────────────────────────────────── -->
+  <div class="page-wrapper">
+
+    <!-- Author sidebar (injected by components.js) -->
+    <aside id="site-sidebar" role="complementary" aria-label="Author profile"></aside>
+
+    <!-- Main content -->
+    <main id="main-content" role="main">
+      <article class="page-content">
+        <h1 class="page-title">About Me</h1>
+
+        <!-- Quick-role intro highlight -->
+        <div class="highlight-box" role="note">
+          <p>
+            I am the <strong>Senior Data Scientist</strong> for the
+            <a href="https://imageomics.org/" target="_blank" rel="noopener noreferrer">Imageomics Institute</a>
+            (an NSF Harnessing the Data Revolution (HDR) institute) and the
+            <a href="http://abcresearchcenter.org/" target="_blank" rel="noopener noreferrer">AI &amp; Biodiversity Change (ABC) Global Center</a>
+            (a joint NSF and NSERC global center).
+          </p>
+        </div>
+
+        <!-- Bio -->
+        <p>
+          At Imageomics, I work on data-driven biological trait discovery and understanding
+          through the use of machine learning (ML) and computer vision (CV) applied to images
+          (the field of <em>imageomics</em>). At ABC, we explore the broader scale of biodiversity
+          and ecological change, such as species ranges, and the impact of environmental change.
+          Much of my work is centered on exploring the vast potential of biodiversity data, all
+          while ensuring our research is both FAIR and reproducible.
+          Some of my favorite projects are listed under <a href="research.html">Research</a>.
+        </p>
+
+        <h2>Academic Background</h2>
+        <p>
+          I earned my <strong>Ph.D. in Mathematics</strong> at The Ohio State University in
+          Summer 2022 under the supervision of
+          <a href="https://u.osu.edu/taylor.2952/" target="_blank" rel="noopener noreferrer">Dr. Krystal Taylor</a>.
+          My mathematical interests are diverse, though my dissertation research focused on
+          harmonic analysis, geometric measure theory, and number theory.
+        </p>
+        <p>
+          I started exploring topological data analysis (TDA) during an internship at the
+          Autonomous Technology Research Center at Wright State University in partnership with
+          the Air Force Research Lab (AFRL). This experience launched my deeper explorations
+          into applied topics. I wrote about my early career journey for the
+          <em>August 2024 Notices of the American Mathematical Society</em>, Early Career Series:
+          <a href="https://www.ams.org/journals/notices/202407/noti2970/noti2970.html?adat=August%202024&trk=2970&pdfissue=202407&pdffile=rnoti-p892.pdf&cat=none&type=.html"
+             target="_blank" rel="noopener noreferrer">
+            <em>Be Open to Unexpected Opportunities: Work-Life Balance Requires Creativity,
+            But it is Worth the Effort</em>
+          </a>.
+        </p>
+
+        <h2>Data Science &amp; Applied Work</h2>
+        <p>
+          Always looking for opportunities to apply my skills in new ways, I have participated
+          in various
+          <a href="https://www.erdosinstitute.org/" target="_blank" rel="noopener noreferrer">Erdős Institute</a>
+          programs. Building off my interest in cryptology, I designed an encryption and
+          decryption program using Elm. As part of the Erdős Institute Fall Boot Camp, I
+          partnered with an OSU physics Ph.D. student to study COVID-19 spread at the county
+          level in the United States utilizing Random Forest and Nearest Neighbors Predictors.
+        </p>
+        <p>
+          In 2021, I collaborated with two other mathematicians and a data scientist on the
+          <strong>NFL Big Data Bowl Challenge</strong>
+          (<a href="https://github.com/egrace479/NFL-BDB-2022" target="_blank" rel="noopener noreferrer">Phase 1</a>
+          &amp;
+          <a href="https://github.com/egrace479/NFL_TDA" target="_blank" rel="noopener noreferrer">Phase 2</a>).
+          We engineered predictive features by play-type to cluster into different strategies
+          and applied predictive modeling to the clusters to create a new metric for special
+          teams play.
+        </p>
+
+        <h2>Quantum Computing</h2>
+        <p>
+          I was selected as a 2022
+          <a href="https://quforce.org/" target="_blank" rel="noopener noreferrer">QuForce</a>
+          Innovation Fellow. I teamed up with a fellow mathematician and physics Ph.D. candidate
+          to work on
+          <a href="https://github.com/egrace479/QuForceBB84Proj" target="_blank" rel="noopener noreferrer">Asymmetric Cloning to Eavesdrop on BB84 Protocol</a>.
+          We implemented asymmetric cloning to eavesdrop on the BB84 Protocol, comparing
+          theoretical expectation to experimental results from implementation on IonQ's 11-qubit
+          quantum computer. Our demo received <strong>first place</strong>, and we expanded our
+          investigation to explore the impact of noise on base fidelity rates
+          (<a href="https://arxiv.org/abs/2409.16284" target="_blank" rel="noopener noreferrer">paper</a>
+          &amp;
+          <a href="https://github.com/egrace479/asymmetric-cloning-BB84" target="_blank" rel="noopener noreferrer">code</a>).
+        </p>
+
+        <h2>Education &amp; Service</h2>
+        <p>
+          Before OSU, I earned my <strong>B.A. in "The Language of Mathematics"</strong> at
+          New York University Gallatin School of Individualized Study. For my Senior Thesis
+          Project "Linguistics and Mathematics in Cryptology," I performed a mathematical and
+          linguistic analysis of an original field cipher from World War I (the ADFGVX cipher)
+          and my modified version.
+        </p>
+        <p>
+          I spent my final year at OSU as President of the OSU Chapter of the
+          <strong>Association for Women in Mathematics (AWM)</strong>, focusing on transitioning
+          the group into a hybrid mode with greater online resources to increase accessibility
+          and membership.
+        </p>
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Footer (injected by components.js) ───────────────────────────────── -->
+  <footer id="site-footer" role="contentinfo"></footer>
+
+  <!-- Scripts -->
+  <script src="js/components.js"></script>
+  <script src="js/site.js"></script>
+  <script>
+    // Initialize shared components and site behaviour
+    SiteComponents.init({ activePage: 'about' });
+    SiteApp.init();
+  </script>
+</body>
+</html>

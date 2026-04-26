@@ -1,0 +1,294 @@
+/**
+ * Typography
+ * ===========
+ * Font sizes, weights, spacing, and styles for all text content. Headings
+ * use a serif font (academic feel); body uses a clean sans-serif.
+ */
+
+/* ── Headings ─────────────────────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--text-primary);
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-weight-bold);
+}
+
+.page-title {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-4);
+  border-bottom: 2px solid var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+  margin-top: var(--space-10);
+  margin-bottom: var(--space-4);
+  color: var(--accent-primary);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--border-color);
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-3);
+  color: var(--text-primary);
+}
+
+h4 {
+  font-size: var(--font-size-lg);
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-2);
+  color: var(--text-primary);
+}
+
+h5 {
+  font-size: var(--font-size-base);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
+  font-weight: var(--font-weight-semi);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── Body Text ────────────────────────────────────────────────────────────── */
+p {
+  margin-bottom: var(--space-4);
+  line-height: var(--line-height-loose);
+  color: var(--text-primary);
+}
+
+/* ── Lists ────────────────────────────────────────────────────────────────── */
+ul, ol {
+  padding-left: var(--space-6);
+  margin-bottom: var(--space-4);
+}
+
+li {
+  margin-bottom: var(--space-2);
+  line-height: var(--line-height-normal);
+}
+
+ul li {
+  list-style-type: disc;
+}
+
+ol li {
+  list-style-type: decimal;
+}
+
+/* Nested lists */
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+/* ── Inline Elements ──────────────────────────────────────────────────────── */
+strong, b {
+  font-weight: var(--font-weight-bold);
+}
+
+em, i {
+  font-style: italic;
+}
+
+/* Inline code */
+code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background-color: var(--bg-code);
+  color: var(--accent-warm);
+  padding: 0.1em 0.35em;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+/* Code blocks */
+pre {
+  background-color: var(--bg-code);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  overflow-x: auto;
+  margin-bottom: var(--space-6);
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: var(--font-size-sm);
+  color: var(--text-primary);
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--accent-primary);
+  padding: var(--space-3) var(--space-5);
+  margin: var(--space-6) 0;
+  background-color: var(--accent-light);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── CV / Academic Entries ────────────────────────────────────────────────── */
+/* Used for CV-style "entry" sections */
+.cv-section {
+  margin-bottom: var(--space-8);
+}
+
+.cv-entry {
+  position: relative;
+  margin-bottom: var(--space-4);
+  padding: var(--space-4);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-left: 4px solid var(--accent-primary);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  transition: box-shadow var(--transition-fast);
+}
+
+.cv-entry:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.cv-entry__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.cv-entry__title {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semi);
+  color: var(--text-primary);
+}
+
+.cv-entry__org {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.cv-entry__date {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.cv-entry__details {
+  font-size: var(--font-size-sm);
+  color: var(--text-primary);
+  margin-top: var(--space-2);
+}
+
+.cv-entry__details ul {
+  margin-bottom: 0;
+}
+
+/* Right-side cluster inside cv-entry__header: holds optional badge(s) + date */
+.cv-entry__header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+/* Link-button row at the bottom of a cv-entry (talks / CV project entries) */
+.cv-entry__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+/* Publication entry */
+.pub-entry {
+  margin-bottom: var(--space-5);
+  padding: var(--space-4);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-left: 4px solid var(--accent-primary);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  transition: box-shadow var(--transition-fast);
+}
+
+.pub-entry:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* Title + badge row at the top of a pub-entry */
+.pub-entry__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-3);
+  margin-bottom: var(--space-1);
+}
+
+.pub-entry__header .pub-entry__title {
+  margin-bottom: 0;
+}
+
+.pub-entry__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  flex-shrink: 0;
+  justify-content: flex-end;
+}
+
+.pub-entry__title {
+  font-weight: var(--font-weight-semi);
+  margin-bottom: var(--space-1);
+  color: var(--text-primary);
+  min-width: 0;
+}
+
+.pub-entry__authors {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-1);
+}
+
+.pub-entry__venue {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: var(--space-2);
+}
+
+.pub-entry__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* Download CV button area */
+.cv-download-banner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  background-color: var(--accent-light);
+  border: 1px solid var(--accent-primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+.cv-download-banner p {
+  margin-bottom: 0;
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+}
