@@ -146,13 +146,18 @@ blockquote p:last-child {
 }
 
 .cv-entry {
-  margin-bottom: var(--space-6);
-  padding-bottom: var(--space-6);
-  border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+  margin-bottom: var(--space-4);
+  padding: var(--space-4);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-left: 4px solid var(--accent-primary);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  transition: box-shadow var(--transition-fast);
 }
 
-.cv-entry:last-child {
-  border-bottom: none;
+.cv-entry:hover {
+  box-shadow: var(--shadow-md);
 }
 
 .cv-entry__header {
@@ -192,6 +197,22 @@ blockquote p:last-child {
   margin-bottom: 0;
 }
 
+/* Right-side cluster inside cv-entry__header: holds optional badge(s) + date */
+.cv-entry__header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+/* Link-button row at the bottom of a cv-entry (talks / CV project entries) */
+.cv-entry__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
 /* Publication entry */
 .pub-entry {
   margin-bottom: var(--space-5);
@@ -207,10 +228,32 @@ blockquote p:last-child {
   box-shadow: var(--shadow-md);
 }
 
+/* Title + badge row at the top of a pub-entry */
+.pub-entry__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-3);
+  margin-bottom: var(--space-1);
+}
+
+.pub-entry__header .pub-entry__title {
+  margin-bottom: 0;
+}
+
+.pub-entry__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  flex-shrink: 0;
+  justify-content: flex-end;
+}
+
 .pub-entry__title {
   font-weight: var(--font-weight-semi);
   margin-bottom: var(--space-1);
   color: var(--text-primary);
+  min-width: 0;
 }
 
 .pub-entry__authors {

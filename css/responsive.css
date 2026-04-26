@@ -202,7 +202,8 @@
   }
 
   /* Show link URLs after anchors for printed CV */
-  .pub-entry a[href]::after {
+  .pub-entry a[href]::after,
+  .cv-entry a[href]::after {
     content: " (" attr(href) ")";
     font-size: 0.75em;
     color: #555;
