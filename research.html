@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="Research interests and highlighted projects of Dr. Elizabeth G. Campolongo —
+                 imageomics, quantum computing, mathematics, and topological data analysis.">
+  <title>Research | Dr. Elizabeth G. Campolongo</title>
+
+  <link rel="icon" type="image/png"
+        href="https://github.com/user-attachments/assets/1509118f-3210-46f3-b133-2cf7e31e3d66">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <script>
+    (function () {
+      var t = localStorage.getItem('egrace-theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+
+  <header id="site-header" role="banner"></header>
+
+  <div class="page-wrapper">
+    <aside id="site-sidebar" role="complementary" aria-label="Author profile"></aside>
+
+    <main id="main-content" role="main">
+      <article class="page-content">
+        <h1 class="page-title">Research Interests</h1>
+
+        <!-- Quick summary -->
+        <div class="highlight-box" role="note">
+          <p>
+            My current research applies <strong>machine learning</strong> and
+            <strong>computer vision</strong> to biology (<em>imageomics</em>) and ecology,
+            with a focus on data-driven discovery, FAIR data practices, and reproducibility.
+            My prior work spanned harmonic analysis, geometric measure theory, number theory,
+            and quantum computing.
+          </p>
+        </div>
+
+        <!-- Table of contents -->
+        <nav class="toc" aria-label="Page contents">
+          <p class="toc__title">On this page</p>
+          <ul role="list">
+            <li><a href="#highlighted-projects">Highlighted Projects</a></li>
+            <li><a href="#mathematics">Mathematics</a></li>
+            <li><a href="#quantum">Quantum Computing</a></li>
+            <li><a href="#tda">Topological Data Analysis</a></li>
+          </ul>
+        </nav>
+
+        <!-- ── Highlighted Projects ──────────────────────────────────────── -->
+        <section id="highlighted-projects" aria-labelledby="highlighted-heading">
+          <h2 id="highlighted-heading">Highlighted Projects</h2>
+
+          <div class="card-grid">
+
+            <!-- HDR ML Challenge -->
+            <article class="card">
+              <h3 class="card__title">HDR Institutes Joint ML Challenge</h3>
+              <p class="card__meta">Imageomics Challenge Lead</p>
+              <p class="card__description">
+                Leading the NSF HDR scientific machine-learning challenge series.
+                Current challenge: beetles as sentinel taxa for predicting drought conditions
+                from NEON specimen imagery.
+              </p>
+              <footer class="card__footer">
+                <a href="https://www.nsfhdr.org/mlchallenge-y2"
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn btn-sm btn-primary">Scientific-Mood Challenge</a>
+                <a href="https://www.nsfhdr.org/mlchallenge"
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn btn-sm btn-outline">Anomaly Detection</a>
+              </footer>
+            </article>
+
+            <!-- Collaborative Distributed Science Guide -->
+            <article class="card">
+              <h3 class="card__title">
+                <a href="https://github.com/Imageomics/Collaborative-distributed-science-guide"
+                   target="_blank" rel="noopener noreferrer">
+                  Collaborative Distributed Science Guide
+                </a>
+              </h3>
+              <p class="card__meta">Project Lead</p>
+              <p class="card__description">
+                Template guide for FAIR and reproducible research, with a focus on
+                interdisciplinary groups. Based on, and contributing to, the
+                <a href="https://imageomics.github.io/Imageomics-guide/"
+                   target="_blank" rel="noopener noreferrer">Imageomics Guide</a>.
+              </p>
+              <footer class="card__footer">
+                <span class="badge badge-teal">FAIR</span>
+                <span class="badge badge-green">Reproducibility</span>
+              </footer>
+            </article>
+
+            <!-- BioCLIP -->
+            <article class="card">
+              <h3 class="card__title">
+                <a href="https://imageomics.github.io/bioclip/"
+                   target="_blank" rel="noopener noreferrer">BioCLIP</a> &amp;
+                <a href="https://imageomics.github.io/bioclip-2/"
+                   target="_blank" rel="noopener noreferrer">BioCLIP 2</a>
+              </h3>
+              <p class="card__meta">Data Lead</p>
+              <p class="card__description">
+                Vision foundation models for the Tree of Life. BioCLIP won
+                <strong>Best Student Paper</strong> at CVPR 2024.
+              </p>
+              <footer class="card__footer">
+                <span class="badge badge-warm">🏆 Best Student Paper CVPR 2024</span>
+              </footer>
+            </article>
+
+            <!-- FAIR Data Tools -->
+            <article class="card">
+              <h3 class="card__title">FAIR Data Access &amp; Validation</h3>
+              <p class="card__meta">Project Lead / Co-Lead / Co-Advisor</p>
+              <p class="card__description">
+                A suite of tools for validating, checking, and downloading large biodiversity
+                datasets reliably.
+              </p>
+              <footer class="card__footer">
+                <a href="https://github.com/Imageomics/cautious-robot"
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn btn-sm btn-outline">cautious-robot</a>
+                <a href="https://github.com/Imageomics/sum-buddy"
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn btn-sm btn-outline">sum-buddy</a>
+                <a href="https://github.com/Imageomics/distributed-downloader"
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn btn-sm btn-outline">distributed-downloader</a>
+              </footer>
+            </article>
+
+            <!-- Fish-Vista Dataset -->
+            <article class="card">
+              <h3 class="card__title">
+                <a href="https://huggingface.co/datasets/imageomics/fish-vista"
+                   target="_blank" rel="noopener noreferrer">Fish-Vista</a>
+              </h3>
+              <p class="card__meta">Dataset Contributor</p>
+              <p class="card__description">
+                A multi-purpose dataset for understanding and identifying biological traits
+                from fish images. Published at CVPR 2025.
+              </p>
+              <footer class="card__footer">
+                <span class="badge badge-teal">🐟 Biodiversity Data</span>
+                <span class="badge badge-green">CVPR 2025</span>
+              </footer>
+            </article>
+
+            <!-- Andromeda -->
+            <article class="card">
+              <h3 class="card__title">
+                <a href="https://huggingface.co/spaces/imageomics/Andromeda"
+                   target="_blank" rel="noopener noreferrer">Andromeda</a>
+              </h3>
+              <p class="card__meta">Data Visualization</p>
+              <p class="card__description">
+                Interactive high-dimensional data exploration tool for biodiversity datasets,
+                presented at SIAM ED24.
+              </p>
+              <footer class="card__footer">
+                <span class="badge badge-teal">Visualization</span>
+              </footer>
+            </article>
+
+            <!-- Quantum: BB84 -->
+            <article class="card">
+              <h3 class="card__title">
+                <a href="https://github.com/egrace479/asymmetric-cloning-BB84"
+                   target="_blank" rel="noopener noreferrer">
+                  Asymmetric Cloning &amp; BB84
+                </a>
+              </h3>
+              <p class="card__meta">QuForce Innovation Fellow — 1st Place Demo</p>
+              <p class="card__description">
+                Studying the practical effect of circuit design on asymmetric phase-covariant
+                cloning applied to the BB84 Protocol on IonQ's quantum computer.
+              </p>
+              <footer class="card__footer">
+                <a href="https://arxiv.org/abs/2409.16284"
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn btn-sm btn-primary">arXiv Paper</a>
+                <span class="badge badge-warm">🥇 1st Place</span>
+              </footer>
+            </article>
+
+            <!-- NFL TDA -->
+            <article class="card">
+              <h3 class="card__title">
+                <a href="https://github.com/egrace479/NFL-BDB-2022"
+                   target="_blank" rel="noopener noreferrer">
+                  NFL Special Teams &amp; TDA
+                </a>
+              </h3>
+              <p class="card__meta">Erdős Institute — Top Project</p>
+              <p class="card__description">
+                Applied topological data analysis and clustering (UMAP, HDBSCAN) to NFL
+                Big Data Bowl data to create a novel metric for special teams play.
+              </p>
+              <footer class="card__footer">
+                <a href="https://github.com/egrace479/NFL_TDA"
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn btn-sm btn-outline">Phase 2 Code</a>
+                <span class="badge badge-warm">🏆 Top Project</span>
+              </footer>
+            </article>
+
+          </div><!-- /.card-grid -->
+        </section>
+
+        <!-- ── Mathematics ───────────────────────────────────────────────── -->
+        <section id="mathematics" aria-labelledby="math-heading">
+          <h2 id="math-heading">Mathematics</h2>
+          <p>
+            During my graduate studies at The Ohio State University, I worked with
+            <a href="https://u.osu.edu/taylor.2952/" target="_blank" rel="noopener noreferrer">Professor Krystal Taylor</a>
+            to answer questions at the intersection of harmonic analysis, number theory, and
+            geometric measure theory. Our primary project was counting lattice points on
+            surfaces (with and without vanishing curvature) using techniques in harmonic analysis.
+          </p>
+          <p>
+            Our paper,
+            <a href="https://doi.org/10.1007/s44007-022-00040-z"
+               target="_blank" rel="noopener noreferrer">
+              <em>Lattice Points Close to the Heisenberg Spheres</em>
+            </a>,
+            was published in <em>La Matematica</em> in March 2023 (also on
+            <a href="https://doi.org/10.48550/arXiv.2205.02163"
+               target="_blank" rel="noopener noreferrer">arXiv</a>).
+            My dissertation,
+            <a href="http://rave.ohiolink.edu/etdc/view?acc_num=osu1658269573881902"
+               target="_blank" rel="noopener noreferrer">
+              <em>Lattice Point Counting through Fractal Geometry and Stationary Phase for
+              Surfaces with Vanishing Curvature</em>
+            </a>,
+            is available on OhioLink and ProQuest.
+          </p>
+          <p>
+            I have recently been reading more on lattice-based cryptography as a post-quantum
+            alternative to RSA and other systems, and am interested in pivoting research toward
+            the cryptology or quantum sphere as a natural extension of my mathematics background.
+          </p>
+        </section>
+
+        <!-- ── Quantum ───────────────────────────────────────────────────── -->
+        <section id="quantum" aria-labelledby="quantum-heading">
+          <h2 id="quantum-heading">Quantum Computing</h2>
+          <p>
+            My quantum research studied the practical effect of circuit design on the
+            implementation of asymmetric phase-covariant cloning applied to the BB84 Protocol
+            for quantum key distribution. This was an extension of my
+            <a href="https://github.com/egrace479/QuForceBB84Proj"
+               target="_blank" rel="noopener noreferrer">QuForce Innovation Fellows project</a>
+            (working with
+            <a href="https://pigottb.github.io/" target="_blank" rel="noopener noreferrer">Brian Pigott</a>
+            and
+            <a href="https://www.linkedin.com/in/hardikroutray/"
+               target="_blank" rel="noopener noreferrer">Hardik Routray</a>)
+            to determine the theoretical optimal strategy for asymmetric cloning on a quantum
+            channel. The experimental aspect was performed on IonQ's 11-qubit quantum computer
+            (using the Qiskit SDK) and on IBM's publicly available quantum computers.
+          </p>
+          <p>
+            I presented on our work at the 2023 APS March Meeting. Our results have been
+            published in the
+            <em>International Journal of Quantum Information</em>
+            (<a href="https://doi.org/10.1142/S0219749925500285"
+                target="_blank" rel="noopener noreferrer">
+              Eavesdropping on the BB84 protocol using phase-covariant cloning: Experimental results
+            </a>)
+            and are also available on
+            <a href="https://arxiv.org/abs/2409.16284"
+               target="_blank" rel="noopener noreferrer">arXiv</a>;
+            the associated code is
+            <a href="https://github.com/egrace479/asymmetric-cloning-BB84"
+               target="_blank" rel="noopener noreferrer">on GitHub</a>.
+          </p>
+        </section>
+
+        <!-- ── TDA ──────────────────────────────────────────────────────── -->
+        <section id="tda" aria-labelledby="tda-heading">
+          <h2 id="tda-heading">Topological Data Analysis (TDA)</h2>
+          <p>
+            I was introduced to TDA during an internship at the Autonomous Technology Research
+            Center at Wright State University in partnership with the Air Force Research Lab.
+            Since then, I have applied TDA techniques to several domains:
+          </p>
+          <ul>
+            <li>
+              <strong>NFL Special Teams Analysis</strong> — applied UMAP + HDBSCAN to engineer
+              predictive features and create a novel metric for special teams play
+              (<a href="https://github.com/egrace479/NFL-BDB-2022"
+                  target="_blank" rel="noopener noreferrer">Phase 1</a>,
+               <a href="https://github.com/egrace479/NFL_TDA"
+                  target="_blank" rel="noopener noreferrer">Phase 2</a>).
+               Top Project at the Erdős Institute Fall 2021 Boot Camp.
+            </li>
+            <li>
+              <strong>AFRL / AFIT internship</strong> — presented
+              <em>A Tutorial on Topological Data Analysis for Big Data Analytics</em>
+              at IEEE NAECON 2019.
+            </li>
+          </ul>
+        </section>
+
+      </article>
+    </main>
+  </div>
+
+  <footer id="site-footer" role="contentinfo"></footer>
+
+  <script src="js/components.js"></script>
+  <script src="js/site.js"></script>
+  <script>
+    SiteComponents.init({ activePage: 'research' });
+    SiteApp.init();
+  </script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+/**
+ * Responsive Design
+ * ==================
+ * Media queries for tablet and mobile viewports. The site uses a
+ * desktop-first approach with breakpoints at 900px (tablet) and 600px
+ * (mobile). The sidebar collapses into a drawer on small screens.
+ *
+ * Breakpoints:
+ *   lg  > 900px  — full desktop layout (sidebar + content side-by-side)
+ *   md  ≤ 900px  — tablet: sidebar collapses, single column
+ *   sm  ≤ 600px  — mobile: tighter padding, stacked nav
+ */
+
+/* ── Tablet (≤ 900px) ─────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  /* Show mobile menu toggle, hide desktop nav */
+  #mobile-menu-toggle {
+    display: flex;
+  }
+
+  .masthead__nav {
+    /* Off-canvas drawer */
+    position: fixed;
+    top: var(--nav-height);
+    right: 0;
+    width: 240px;
+    height: calc(100vh - var(--nav-height));
+    background-color: var(--nav-bg);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: var(--space-4) var(--space-4);
+    box-shadow: var(--shadow-lg);
+    transform: translateX(100%);
+    transition: transform var(--transition-normal);
+    z-index: 99;
+    overflow-y: auto;
+    flex-wrap: nowrap;
+  }
+
+  .masthead__nav.is-open {
+    transform: translateX(0);
+  }
+
+  .masthead__nav-link {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-sm);
+  }
+
+  /* Overlay when mobile menu is open */
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 98;
+  }
+
+  .nav-overlay.is-open {
+    display: block;
+  }
+
+  /* Stack layout: sidebar above content */
+  .page-wrapper {
+    flex-direction: column;
+    padding: var(--space-6) var(--space-5);
+    gap: var(--space-6);
+  }
+
+  /* Sidebar becomes a horizontal strip */
+  #site-sidebar {
+    width: 100%;
+    position: static;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .author-profile {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: var(--space-5);
+    padding: var(--space-4) var(--space-5);
+  }
+
+  .author-profile__avatar,
+  .author-profile__avatar-placeholder {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    margin: 0;
+  }
+
+  .author-profile__content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .author-profile__name {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--space-1);
+  }
+
+  .author-profile__bio {
+    margin-bottom: var(--space-2);
+  }
+
+  .author-profile__divider {
+    display: none;
+  }
+
+  .author-profile__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3) var(--space-5);
+  }
+
+  /* Tighten card grids */
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Mobile (≤ 600px) ─────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  :root {
+    --font-size-3xl: 1.75rem;
+    --font-size-2xl: 1.5rem;
+  }
+
+  .masthead {
+    padding: 0 var(--space-4);
+  }
+
+  .masthead__title span {
+    display: none; /* show only logo icon on very small screens */
+  }
+
+  .page-wrapper {
+    padding: var(--space-4) var(--space-4);
+  }
+
+  .author-profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .author-profile__avatar,
+  .author-profile__avatar-placeholder {
+    margin: 0 auto;
+  }
+
+  .author-profile__links {
+    justify-content: center;
+  }
+
+  .page-404 img {
+    max-width: 100%;
+  }
+
+  .cv-download-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .highlight-box {
+    padding: var(--space-4) var(--space-5);
+  }
+
+  /* Full-width buttons on mobile */
+  .page-404 .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Stack CV entry headers vertically */
+  .cv-entry__header {
+    flex-direction: column;
+  }
+}
+
+/* ── Print ────────────────────────────────────────────────────────────────── */
+@media print {
+  #site-header,
+  #site-sidebar,
+  #site-footer {
+    display: none;
+  }
+
+  .page-wrapper {
+    padding: 0;
+  }
+
+  #main-content {
+    width: 100%;
+  }
+
+  a {
+    text-decoration: underline;
+    color: inherit;
+  }
+
+  /* Show link URLs after anchors for printed CV */
+  .pub-entry a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.75em;
+    color: #555;
+  }
+}
